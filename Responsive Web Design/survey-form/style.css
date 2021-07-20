@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#title, #description {
+    text-align: center;
+}
+
+#title {
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+#description {
+    font-weight: 200;
+    font-style: italic;
+}
+
+#survey-form {
+    margin: 40px 0;
+    padding: 40px;
+    background-color: rgba(15, 15, 36, 0.8);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group .form-control {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+}
+
+.form-group textarea.form-control {
+    height: 100px;
+    padding: 10px 15px;
+}
+
+.btn {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.btn-primary {
+    background-color: rgba(82, 199, 133, 0.8);
+    border: 1px solid rgb(82, 199, 133);
+    color: #fff;
+}
+
+.btn.btn-primary:hover {
+    background-color: rgba(82, 199, 133, 1);
+}
+
+@media only screen and (max-width: 769px) {
+    .container {
+        width: 100%;
+    }
+
+    #title, #description {
+        padding: 0 20px;
+    }
+
+    #title {
+        margin: 20px 0;
+    }
+
+    #survey-form {
+        margin: 20px 0 0;
+        padding: 40px 20px;
+    }
+}

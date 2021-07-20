@@ -1,0 +1,325 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #fafafa;
+    --color-black: #000;
+    --color-lighter-gray: #eee;
+    --color-light-gray: rgb(206, 206, 206);
+    --color-gray: rgb(61, 61, 61);
+    --color-light-orange: rgb(247, 178, 51);
+    --color-orange: rgb(255, 153, 58);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none !important;
+    color: var(--color-black);
+    background-color: var(--color-light-orange);
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--color-orange);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    background-color: var(--color-lighter-gray);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: var(--color-lighter-gray);
+    color: var(--color-black);
+}
+
+header #header-logo, header #nav-bar {
+    flex: 1;
+}
+
+header #header-logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+header #header-logo span {
+    margin: 0 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+header #header-logo .whiteBox {
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+header #header-logo .blackBox {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+header #header-logo #header-img-wrapper {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+header #header-logo #header-img-wrapper img {
+    width: 100%;
+}
+
+header #nav-bar {
+    font-size: 16px;
+}
+
+header #nav-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+header #nav-bar ul li a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+header #nav-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 60%;
+    margin: 0 20%;
+    padding-top: 120px;
+}
+
+#subscribe {
+    text-align: center;
+}
+
+#subscribe .caption {
+    font-size: 22px;
+}
+
+#subscribe .inputBox {
+    margin: 20px 0;
+}
+
+#subscribe .inputBox input[type="email"] {
+    width: 350px;
+    padding: 10px;
+    border-radius: 0;
+}
+
+#subscribe .inputBox input[type="email"]:focus {
+    outline: none;
+    border: 2px solid var(--color-gray);
+}
+
+#features {
+    margin-top: 50px;
+}
+
+#features .featureBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#features .featureBox:last-child {
+    margin-bottom: 0;
+}
+
+#features .featureBox .iconWrapper {
+    flex: 1 1 10%;
+    color: var(--color-light-orange);
+}
+
+#features .featureBox .contentWrapper {
+    flex: 1 1 90%;
+    margin-left: 20px;
+}
+
+#features .featureBox .contentWrapper h4 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+#features .featureBox .contentWrapper p {
+    font-size: 16px;
+}
+
+#how-it-works {
+    margin-top: 50px;
+}
+
+#how-it-works #video {
+    max-width: 100%;
+    height: 400px;
+}
+
+#pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#pricing .priceBox {
+    width: 32%;
+    text-align: center;
+    border: 1px solid var(--color-light-gray);
+    overflow: hidden;
+}
+
+#pricing .priceBox .category {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--color-light-gray);
+}
+
+#pricing .priceBox .price {
+    display: block;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pricing .priceBox ul {
+    list-style: none;
+}
+
+#pricing .priceBox ul li {
+    margin-bottom: 5px;
+}
+
+#pricing .priceBox .button {
+    margin: 40px 0;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 50px 20% 0;
+    padding: 20px;
+    height: 80px;
+    background-color: var(--color-light-gray);
+}
+
+#footer .copyright,
+#footer .bottomNav {
+    flex-grow: 1;
+}
+
+#footer .bottomNav ul {
+    list-style: none;
+    text-align: right;
+}
+
+#footer .bottomNav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#footer .bottomNav li a.nav-link {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+#footer .bottomNav li a.nav-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 769px) {
+    header {
+        flex-direction: column;
+    }
+
+    header #header-logo {
+        font-size: 22px;
+    }
+
+    header #header-logo #header-img-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    header #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    header #nav-bar ul li {
+        margin-bottom: 5px;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 180px 20px 0;
+    }
+
+    #subscribe .inputBox input[type="email"] {
+        width: 100%;
+    }
+
+    #features .featureBox .iconWrapper {
+        display: none;
+    }
+
+    #features .featureBox .contentWrapper {
+        margin-left: 0;
+    }
+
+    #how-it-works #video {
+        height: 300px;
+    }
+
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pricing .priceBox {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    #footer {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+}
