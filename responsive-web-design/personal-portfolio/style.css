@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@100;200;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #7D5A50;
+    background-color: #FDF6F0;
+    scroll-behavior: smooth;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.btn.btn-primary {
+    color: #7D5A50;
+    background-color: #FCDEC0;
+    border: 3px solid #7D5A50;
+    transition: .3s ease;
+}
+
+.btn.btn-primary:hover {
+    color: #FCDEC0;
+    background-color: transparent;
+    border-color: #FCDEC0;
+    box-shadow: #B4846C 3px 3px, #E5B299 6px 6px;
+}
+
+.btn.btn-secondary {
+    color: #FCDEC0;
+    background-color: #7D5A50;
+    border: 3px solid #FCDEC0;
+    transition: .3s ease;
+}
+
+.btn.btn-secondary:hover {
+    color: #7D5A50;
+    background-color: transparent;
+    border-color: #7D5A50;
+    box-shadow: #E5B299 3px 3px, #B4846C 6px 6px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Monoton', cursive;
+    font-size: 18px;
+    text-align: center;
+    background-color: #7D5A50;
+    box-shadow: 0px 3px 20px 2px rgba(180,132,108,0.75);
+    z-index: 9999;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 20px 25px;
+    transition: .3s ease;
+}
+
+#navbar ul li .nav-link {
+    text-decoration: none;
+    color: #FCDEC0;
+}
+
+#navbar ul li:hover {
+    background-color: #FCDEC0;
+}
+
+#navbar ul li:hover .nav-link {
+    color: #7D5A50;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#welcome-section h1 {
+    margin: 0;
+    font-family: 'Monoton', cursive;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+}
+
+#welcome-section p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#projects {
+    padding: 60px 0;
+    text-align: center;
+    color: #FCDEC0;
+    background-color: #7D5A50;
+}
+
+#projects h3, #contact h3 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+#projects .project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+#projects .project-wrapper .project-tile {
+    position: relative;
+    flex: 33.33333%;
+}
+
+#projects .project-wrapper .project-tile img {
+    display: block;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+#projects .project-wrapper .project-tile .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #FDF6F0;
+    transition: .3s ease;
+    opacity: 0;
+}
+
+#projects .project-wrapper .project-tile .overlay a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    font-family: 'Monoton', cursive;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #7D5A50;
+    transform: translate(-50%, -50%);
+}
+
+#projects .project-wrapper .project-tile:hover .overlay {
+    opacity: 1;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+#contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#contact ul li {
+    display: inline-block;
+}
+
+footer {
+    padding: 20px 10px;
+    text-align: center;
+    color: #FCDEC0;
+    background-color: #7D5A50;
+    border-top: 5px solid #E5B299;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        font-size: 12px;
+    }
+
+    #navbar {
+        font-size: 14px;
+    }
+
+    #navbar ul li {
+        padding: 20px;
+    }
+
+    #welcome-section {
+        text-align: center;
+    }
+
+    #welcome-section h1 {
+        font-size: 2.5em;
+    }
+
+    #welcome-section p {
+        font-size: 16px;
+    }
+
+    #projects h3, #contact h3 {
+        font-size: 1.5em;
+    }
+
+    #projects .project-wrapper .project-tile {
+        flex: 50%;
+    }
+
+    #projects .project-wrapper .project-tile .overlay a {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
